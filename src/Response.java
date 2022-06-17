@@ -1,20 +1,26 @@
 //import java.util.Date;
 
+import java.time.LocalDate;
+
 public class Response {
 	
 	// Variables and constructor method is created.
 	private String code; 
 	private String date; 
 	
+	public Response() {	
+	    //this.code = "";
+	}
+	
+	
 	public Response(String code, String date) {
 		this.code = code;
-		this.date = date;
-//		this.date = LocalDate.now().toString();
+//		this.date = date;
+		this.date = LocalDate.now().toString();
 	}
 	
-	public Response() {		
-	}
 	
+
 	// Getter and Setter's are created.
 	
 	public String getCode() {
