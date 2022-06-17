@@ -7,7 +7,6 @@ public class MemberAccountService {
 	//CRUD methods are written
 	
 	//MemberAccount member = new MemberAccount();
-	
 	// create
 	
 	public static MemberAccountService create(int id, String name, String surname, double balance, String phone, String memberCode) { //MemberAccount member
