@@ -8,13 +8,14 @@ public class MemberAccount {
 	private double balance;
 	private String phone;
 	private String memberCode;
+	private String code;
 	
 	//Constructor
 	
 	public MemberAccount() {		
 	}
 	
-	public MemberAccount(int id, String name, String surname, double balance, String phone, String memberCode) {
+	public MemberAccount(int id, String name, String surname, double balance, String phone, String memberCode, String code) {
 		this.id = id;
 		this.name = name;
 		this.surname = surname;
@@ -22,6 +23,7 @@ public class MemberAccount {
 		this.phone = phone;
 //		this.memberCode = memberCode;
         this.memberCode = id + name.substring(0,2);
+        this.code = code;
 
 	}
 	
@@ -73,11 +75,23 @@ public class MemberAccount {
 	//	setMemberCode();
 		return memberCode;
 	}
+	
+	public void setMemberCode(String memberCode){
+	    this.memberCode = memberCode;
+	}
 	/*
 	private void setMemberCode(String memberCode) {
 		this.memberCode = memberCode;
 //		this.memberCode = this.id + this.name.substring(0,2);
 	}
 	*/
+	
+	public String getCode() {
+		return code;
+	}
+	
+	public void setCode(String code) {
+		this.code = code;
+	}
 
 }
