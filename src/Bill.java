@@ -1,4 +1,6 @@
-import java.util.Date;
+//import java.util.Date;
+
+import java.time.LocalDate;
 
 public class Bill {
 	
@@ -6,8 +8,8 @@ public class Bill {
 	private int id; 
 	private double amount;
 	private int billType; 
-	private Date processDate;
-    private String memberCode;
+	private LocalDate processDate;
+//    private String memberCode;
 	
     
     // A constructor method is created as a empty 
@@ -15,12 +17,12 @@ public class Bill {
 	}
 	
 	// Constructor method is created
-	public Bill(int id, double amount, int billType, Date processDate, String memberCode) {
+	public Bill(int id, double amount, int billType) {
 		this.id = id;
 		this.amount = amount;
 		this.billType = billType;
-		this.processDate = processDate;
-		this.memberCode = memberCode;
+		this.processDate = LocalDate.now();
+//		this.memberCode = memberCode;
 		
 	}
 	
@@ -50,14 +52,14 @@ public class Bill {
 		this.billType = billType;
 	}
 	
-	public Date getProcessDate() {
+	public LocalDate getProcessDate() {
 		return processDate;
 	}
 	
-	public void setProcessDate(Date processDate) {
+	public void setProcessDate(LocalDate processDate) {
 		this.processDate = processDate;
 	}
-	
+	/*
 	public String getMemberCode() {
 		return memberCode;
 	}
@@ -66,7 +68,7 @@ public class Bill {
 		this.memberCode = memberCode;
 	}
 	
-	
+	*/
 	
 	
 }
